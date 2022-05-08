@@ -5,13 +5,17 @@
    </div>
    <div class="article-container">
        <div class="article-grid" v-for="data3 in datas3" :key="data3.ContentID" >
-           <img :src="data3.LandscapeImage">
+           <router-link :to="{name:'content', params:{id: data3.ContentID}}"  >
+           <img :src="data3.PortraitImage">
            <div class="article-title">
                <p>{{data3.Properties[5].Value}}</p>
                <h3>{{data3.Title}}</h3>
            </div>
+           </router-link>
        </div>
    </div>
+   
+
     <div class="number-container">
                <a class="previous" href="">&laquo; <span>previous</span></a>
                <a href="">1</a>
@@ -27,11 +31,18 @@
 
 <script>
 
+
 export default {
 name : "ThirdSection",
  props : ['datas3'],
 
+
+ 
+   
+  
 }
+
+
 </script>
 
 <style>

@@ -2,11 +2,13 @@
 <template>
    
         <div class="slider">
+             <router-link :to="{name:'content', params:{id: data.ContentID}}"  >
             <img  :src="data.LandscapeImage" alt="">
             <div class="slider-text1">
                 <h1 >{{data.Title}}</h1>
                 <p >{{data.Summary}}</p>
             </div>
+            </router-link>
         </div>
   
 </template>

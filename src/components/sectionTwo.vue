@@ -2,12 +2,13 @@
 <template >
       <div class="slide-container" >
          <div  class="slide" v-for="data1  in datas1" :key="data1.ContentID">
+     <router-link :to="{name:'content', params:{id: data1.ContentID}}"  >
             <img  :src="data1.LandscapeImage" >
             <div class="slide-text" >
                 <h1>{{data1.Title}}</h1>
                 <p>{{data1.Summary}}</p>
-              
             </div>
+     </router-link>
          </div>
       </div>
   

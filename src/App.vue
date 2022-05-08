@@ -1,19 +1,20 @@
 <template>
 <IndexHeader />
-<FullSections/>
 
+
+<router-view></router-view>
 </template>
 
 <script>
 import IndexHeader from './components/Header.vue'
-import FullSections from './components/fullSections.vue'
+
 
 
 export default {
   name: 'App',
   components: {
    IndexHeader,
-   FullSections
+
  
   }
 }
