@@ -3,7 +3,7 @@
    <div class="home">
        <SideBar />
        <section class="main">
-          <FirstSection :data="data.result[0].list[0]" />
+          <FirstSection :data="data" />
           <SecondSection :datas1="datas1" />
           <ThirdSection :datas3="datas3"/>
        </section>
@@ -35,9 +35,9 @@ setup(){
  const datas3 = ref([]);
 
 function getSlide(){
-        axios.get('http://apitest.tek-nic.com:3000/FirstPage')
+        axios.get('https://apitest.tek-nic.com/FirstPage')
   .then(function (response) {
-    data.value =(response.data);
+    data.value =(response.data.result[0].list[0]);
     datas1.value = (response.data.result[1].list);
     datas3.value = (response.data.result[2].list);
     console.log( response.data);

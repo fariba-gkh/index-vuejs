@@ -16,7 +16,7 @@
             <div class="secondbar">
                 <ul class="secondbar__list">
                     <li></li>
-                 <router-link to="/">  
+                 <router-link to="/"  style="text-decoration: none; ">  
                       <li>HOME</li>
                  </router-link>
                     <li>CELEBRIES</li>

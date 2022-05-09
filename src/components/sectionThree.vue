@@ -5,7 +5,7 @@
    </div>
    <div class="article-container">
        <div class="article-grid" v-for="data3 in datas3" :key="data3.ContentID" >
-           <router-link :to="{name:'content', params:{id: data3.ContentID}}"  >
+           <router-link :to="{name:'content', params:{id: data3.ContentID}}"   style="text-decoration: none;" >
            <img :src="data3.PortraitImage">
            <div class="article-title">
                <p>{{data3.Properties[5].Value}}</p>
@@ -76,7 +76,8 @@ direction: rtl;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 1rem 0;  
+    padding: 1rem 0; 
+ 
 }
 
 .article-title p {
@@ -85,6 +86,7 @@ direction: rtl;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+       text-decoration: none; 
 }
 .article-title h3 {
     text-transform: uppercase;
@@ -105,4 +107,5 @@ text-decoration: none;
 margin-left: 3px;
 font-size: 1.2rem;
 }
+
 </style>

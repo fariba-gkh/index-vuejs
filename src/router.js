@@ -1,8 +1,9 @@
 
 import {createRouter, createWebHistory} from 'vue-router';
 
-import singlePage from '../src/components/singlePage/singlePage.vue'
 import FullSection from './components/fullSections.vue'
+import singlePage from '../src/components/singlePage/singlePage.vue'
+
 
 
 const routes = [

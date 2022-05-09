@@ -8,7 +8,7 @@
        <section class="main-content">
 
          <div class="content-container">
-             <div class="content-img"> <img :src="content.ThumbImage" alt=""></div>
+             <div class="content-img"> <img :src="content.LandscapeImage" alt=""></div>
              <div class="content-text" >
                  <h2>{{content.Title}}</h2>
                  <p>{{content.Summary}}</p>
@@ -50,7 +50,7 @@ setup() {
   const content = ref ();
     function getContent(){
         const currentRoute = useRoute();
-       fetch('http://apitest.tek-nic.com:3000/GetContent' , {
+       fetch('https://apitest.tek-nic.com/GetContent' , {
             method : 'post',
             body : JSON.stringify({
                 request:{
